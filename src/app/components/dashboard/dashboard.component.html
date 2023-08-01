@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="todo-box">
+    <h1>ToDO Task</h1>
+    <div class="input_task">
+      <form ngNativeValidate>
+        <input
+          type="text"
+          placeholder="Enter the task"
+          name="task"
+          [(ngModel)]="addTaskData"
+          required
+        />
+        <button (click)="addTask()">Add</button>
+      </form>
+    </div>
+    <h3>Task:</h3>
+    <div class="task_list">
+      <ul *ngFor="let data of taskArr">
+        <div class="list">
+          <li>
+            {{ data.task }}
+          </li>
+          <button (click)="callEdit(data)">Edit</button>
+          <button (click)="deleteTask(data)">Delete</button>
+        </div>
+      </ul>
+    </div>
+    <!-- update Edit -->
+    <div class="update-task">
+      <h3>Edit Task</h3>
+      <div class="edit-input">
+        <input type="text" placeholder="Edit Task" [(ngModel)]="editTaskData" />
+        <button (click)="editTask()">Update</button>
+      </div>
+    </div>
+  </div>
+</div>
