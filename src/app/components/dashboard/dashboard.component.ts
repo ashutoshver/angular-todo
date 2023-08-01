@@ -13,6 +13,7 @@ export class DashboardComponent {
   taskArr: Todo[] = [];
   addTaskData: string = '';
   editTaskData: string = '';
+  popup = false
 
   constructor(private api: TaskService) {}
 

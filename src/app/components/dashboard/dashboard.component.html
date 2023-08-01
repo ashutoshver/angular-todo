@@ -20,17 +20,25 @@
           <li>
             {{ data.task }}
           </li>
-          <button (click)="callEdit(data)">Edit</button>
-          <button (click)="deleteTask(data)">Delete</button>
+          <div class="del_edt_btn">
+            <button (click)="callEdit(data); popup = true">EDIT</button>
+            <button (click)="deleteTask(data)">&times;</button>
+          </div>
         </div>
       </ul>
     </div>
     <!-- update Edit -->
-    <div class="update-task">
-      <h3>Edit Task</h3>
-      <div class="edit-input">
-        <input type="text" placeholder="Edit Task" [(ngModel)]="editTaskData" />
-        <button (click)="editTask()">Update</button>
+    <div class="update-task" *ngIf="popup">
+      <div class="popup">
+        <h3>Edit Task</h3>
+        <div class="edit-input">
+          <input
+            type="text"
+            placeholder="Edit Task"
+            [(ngModel)]="editTaskData"
+          />
+          <button (click)="editTask(); popup = false">Update</button>
+        </div>
       </div>
     </div>
   </div>

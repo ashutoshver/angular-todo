@@ -1,0 +1,116 @@
+
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.todo-box{
+    width: 70%;
+    margin: auto;
+    border: 1px solid black;
+    text-align: center;
+    margin-top: 5vh;
+    background-color: teal;
+    color: white;
+}
+.todo-box h1{
+    border-bottom: 1px solid #ccc;
+    font-size: 3rem;
+}
+.input_task{
+    padding: 10px 5px;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+}
+.input_task input{
+    width: 70%;
+    padding: 10px;
+}
+.input_task button{
+    width: 20%;
+    padding: 10px;
+    cursor: pointer;
+    background-color: yellowgreen;
+}
+.todo-box h3{
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+    padding: 10px 5px;
+    font-size: 30px;
+}
+.task_list ul{
+    border-bottom: 1px solid #ccc;
+}
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+.list li{
+    list-style: none;
+    font-size: 20px;
+    text-align: justify;
+}
+.del_edt_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 5px;
+}
+
+.del_edt_btn button{
+    width: 3.5rem;
+    padding: 5px 10px;
+    background-color: yellowgreen;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bolder;
+}
+
+
+/* Edit and Update Task */
+.update-task {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 5px;
+    width: 50%;
+    position: relative;
+    transition: all 5s ease-in-out;
+  }
+
+
+
+  @media screen and (max-width:748px) and (min-width:300px) {
+    .todo-box{
+        width: 90%;
+    }
+    .list{
+        padding: 10px 5px;
+    }
+    .del_edt_btn{
+        column-gap: 2px;
+    }
+    .del_edt_btn button{
+        width: 2.5rem;
+        padding: 5px 5px;
+        cursor: pointer;
+        font-size: 10px;
+        font-weight: bolder;
+    }
+    .list li{
+        font-size: 12px;
+    }
+  }
