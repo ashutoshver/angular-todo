@@ -29,7 +29,6 @@ export class DashboardComponent {
     this.taskObj.task = this.addTaskData;
     this.api.addTask(this.taskObj).subscribe(
       (result) => {
-        console.log(result)
         this.ngOnInit();
         this.addTaskData = '';
       },
